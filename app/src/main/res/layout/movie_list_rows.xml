@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="movie"
+            type="com.example.interviewapp.model.Movies" />
+
+        <variable
+            name="clickListener"
+            type="com.example.interviewapp.adapter.MovieListAdapter.MovielistListener" />
+    </data>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/list_view_margin"
+            android:layout_marginRight="@dimen/list_view_margin"
+            android:layout_marginBottom="@dimen/list_view_margin"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:onClick="@{() -> clickListener.onClick(movie)}"
+                android:background="@color/bg_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="230dp"
+                    android:layout_weight="0.5"
+                    android:scaleType="fitXY"
+                    android:id="@+id/movie_poster"
+                    app:imagesourceurl="@{movie.poster}"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/movienametextsixe"
+                        android:gravity="center_vertical"
+                        android:id="@+id/movie_name"
+                        android:textColor="@color/text_color"
+                        android:textStyle="bold"
+                        app:movietitletext="@{movie.title}"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/movie_year"
+
+                        app:movieyeartext="@{movie.year}"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+</layout>

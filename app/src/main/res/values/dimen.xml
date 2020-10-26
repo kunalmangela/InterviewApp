@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_view_margin">15dp</dimen>
+    <dimen name="moviedetials_text_sizes">17sp</dimen>
+    <dimen name="moviedetials_text_magins">5dp</dimen>
+    <dimen name="movienametextsixe">21sp</dimen>
+    <dimen name="listscreenheading">32sp</dimen>
+
+</resources>

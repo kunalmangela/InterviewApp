@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="moviedetailmodel"
+            type="com.example.interviewapp.viewmodel.MovieDetailsModel" />
+    </data>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="250dp"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                app:imagesourceurl="@{moviedetailmodel.moviedetailsresponse.poster}" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/moviedetials_text_magins"
+                android:textSize="@dimen/movienametextsixe"
+                android:textStyle="bold"
+                app:movietitletext="@{moviedetailmodel.moviedetailsresponse.title}" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/moviedetials_text_magins"
+                android:textSize="@dimen/moviedetials_text_sizes"
+                android:textStyle="bold"
+                app:movieyeartext="@{moviedetailmodel.moviedetailsresponse.year}" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/moviedetials_text_magins"
+                android:textSize="@dimen/moviedetials_text_sizes"
+                android:textStyle="bold"
+                app:movieimdb="@{moviedetailmodel.moviedetailsresponse.imdbRating}" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/moviedetials_text_magins"
+                android:textSize="@dimen/moviedetials_text_sizes"
+                android:textStyle="bold"
+                app:moviegenre="@{moviedetailmodel.moviedetailsresponse.genre}" />
+
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ImageView
+            android:id="@+id/status_image_details_screen"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+
+
+    </FrameLayout>
+
+
+</layout>
