@@ -44,7 +44,7 @@
                 android:layout_marginTop="@dimen/moviedetials_text_magins"
                 android:textSize="@dimen/movienametextsixe"
                 android:textStyle="bold"
-                app:movietitletext="@{moviedetailmodel.moviedetailsresponse.title}" />
+                app:movietextsetting="@{ moviedetailmodel.moviedetailsresponse.title}" />
 
 
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_marginTop="@dimen/moviedetials_text_magins"
                 android:textSize="@dimen/moviedetials_text_sizes"
                 android:textStyle="bold"
-                app:movieyeartext="@{moviedetailmodel.moviedetailsresponse.year}" />
+                app:movietextsetting="@{String.format(@string/year, moviedetailmodel.moviedetailsresponse.year)}" />
 
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_marginTop="@dimen/moviedetials_text_magins"
                 android:textSize="@dimen/moviedetials_text_sizes"
                 android:textStyle="bold"
-                app:movieimdb="@{moviedetailmodel.moviedetailsresponse.imdbRating}" />
+                app:movietextsetting="@{String.format(@string/imdb, moviedetailmodel.moviedetailsresponse.imdbRating)}" />
 
 
             <TextView
@@ -71,7 +71,7 @@
                 android:layout_marginTop="@dimen/moviedetials_text_magins"
                 android:textSize="@dimen/moviedetials_text_sizes"
                 android:textStyle="bold"
-                app:moviegenre="@{moviedetailmodel.moviedetailsresponse.genre}" />
+                app:movietextsetting="@{String.format(@string/genre, moviedetailmodel.moviedetailsresponse.genre)}" />
 
         </LinearLayout>
         </androidx.core.widget.NestedScrollView>

@@ -16,33 +16,11 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<Movies>?) {
     adapter.submitList(data)
 }*/
 
-@BindingAdapter("movieyeartext")
-fun bindmoviename(textView: TextView , textstring: String?) {
-    textstring?.let {
-        textView.text="Released: "+it
-    }
-}
 
-@BindingAdapter("movietitletext")
-fun bindmovieyear(textView: TextView , textstring: String?) {
-    textstring?.let {
-        textView.text=it
-    }
-}
-
-
-
-
-@BindingAdapter("moviegenre")
-fun bindmoviegenre(textView: TextView , textstring: String?) {
-    textstring?.let {
-        textView.text="Genre: "+it
-    }
-}
-@BindingAdapter("movieimdb")
+@BindingAdapter("movietextsetting")
 fun bindmovieimdb(textView: TextView , textstring: String?) {
     textstring?.let {
-        textView.text="IMDB: "+it
+        textView.text=it
     }
 }
 

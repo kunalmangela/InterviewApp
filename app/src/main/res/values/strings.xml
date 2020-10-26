@@ -2,8 +2,9 @@
     <string name="app_name">InterviewApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="year">Released: %d</string>
-    <string name="imdb">IMDB: %$s</string>
-    <string name="genre">Genre: %d</string>
+    <string name="year">Released: %s</string>
+    <string name="imdb">IMDB: %s</string>
+    <string name="genre">Genre: %s</string>
+    <string name="movie_name">Movie Name: %s</string>
 
 </resources>
