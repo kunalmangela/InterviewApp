@@ -12,10 +12,10 @@ class MovieRepository {
 
 
     //for getting list of movies from api call
-    var movieresponsedata= MutableLiveData<List<Movies?>>()
+    val movieresponsedata= MutableLiveData<List<Movies?>>()
 
     //for getting details of movies from api call
-    var moviedetailsresponsedata= MutableLiveData<MovieDetails?>()
+    val moviedetailsresponsedata= MutableLiveData<MovieDetails?>()
 
 
 
@@ -28,7 +28,7 @@ class MovieRepository {
             params["apikey"] = "32bce2c9"
             val movielistresponse= MovieApi.retrofitService.getMovielist(params)
             movielistresponse.body()?.run {
-                movieresponsedata.value=Search
+                movieresponsedata.postValue(Search)
             }
 
         }
@@ -41,7 +41,7 @@ class MovieRepository {
             params["i"] = movieid
             params["apikey"] = "32bce2c9"
             val movielistresponse= MovieApi.retrofitService.getMoviedetails(params)
-                moviedetailsresponsedata.value=movielistresponse.body()
+                moviedetailsresponsedata.postValue(movielistresponse.body())
 
 
         }

@@ -16,7 +16,7 @@ class MovieListModel : ViewModel(){
     val repository= MovieRepository()
 
     //movie list adat we gob from repository after successful api call
-    var movielistresponse: LiveData<List<Movies?>> = repository.movieresponsedata
+    val movielistresponse: LiveData<List<Movies?>> = repository.movieresponsedata
 
 
     //here we create status variable with  its backing property to handle network call result states

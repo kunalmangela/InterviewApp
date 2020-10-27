@@ -59,6 +59,7 @@ class MainScreen : AppCompatActivity() {
 
         //Change adapter state after observed live data list of movies data from viewmodel
         movieviewmodel.movielistresponse.observe(this, Observer {
+            Log.e("moviesize",""+it.size)
             it?.let {
                 if(it.size>0) {
                     adapter.movielist = it

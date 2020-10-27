@@ -79,8 +79,10 @@
 
         <ImageView
             android:id="@+id/status_image_details_screen"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:padding="100dp"
             android:layout_gravity="center"
             android:visibility="gone" />
 
